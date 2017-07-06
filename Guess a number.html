@@ -10,15 +10,10 @@ var max = +prompt("Введите большее число");
 
 var number = getRandomInt(min, max);
 var attempts = 0;
-var round = 0;
 
 while (true) {
-	if (round % 2 == 0)
-		player = 1;
-	else
-		player = 2;
 
-	var user_number = prompt("Игрок " + player + " угадайте число от " + min + " до " + max + ". Для выхода нажмите q");
+	var user_number = prompt("Угадайте число от " + min + " до " + max + ". Для выхода нажмите q");
 
 	if (user_number == 'q')
 		break;
@@ -37,12 +32,11 @@ while (true) {
 	else if (number < user_number)
 		alert("Загаданное чиcло меньше");
 	else if (number == user_number) {
-		alert("Игрок " + player + " вы угадали! Это число " + number + ". Количество попыток " + attempts);
+		alert("Вы угадали! Это число " + number + ". Количество попыток " + attempts);
 		break;
 	}
 	else 
 		alert("Необходимо ввести число");
-	round++;
 }
 
 </script>
